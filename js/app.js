@@ -77,3 +77,10 @@ LIST[1] ->
     done: true,
     trash: false
 }
+
+// to-do is Done. (end of day 1 18:09 on video)
+element.classList.toggle(CLASS)
+
+function completeToDo( ){
+
+}
