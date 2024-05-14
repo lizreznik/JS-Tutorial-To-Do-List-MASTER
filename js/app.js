@@ -105,5 +105,9 @@ list.addEventListener("click", function(event) {
         removeToDo(element); 
     }
 }); 
+// save to-do-list to localStorage. 
+localStorage.setItem('key', 'value'); 
+let variable = localStorage.getItem('key'); 
+localStorage.setItem("TODO", JSON.stringify(LIST)); 
 
 ;
