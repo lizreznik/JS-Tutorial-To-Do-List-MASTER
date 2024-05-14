@@ -81,6 +81,9 @@ LIST[1] ->
 // to-do is Done. (end of day 1 18:09 on video)
 element.classList.toggle(CLASS)
 
-function completeToDo( ){
-
+function completeToDo(element){
+    element.classList.toggle(CHECK); 
+    element.classList.toggle(UNCHECK); 
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH); 
+    LIST[element.id].done = LIST[element.id].done ? false : true; 
 }
