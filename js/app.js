@@ -93,4 +93,17 @@ function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode); 
     LIST[element.id].trash = true; 
 }
-; 
+ 
+// target element created dynamically 
+const list = document.getElementById("list"); 
+list.addEventListener("click", function(event) {
+    let element = event.target; //<i class="de fa fa-trash-o" job="delete" id="0"></i> 
+    const elementJOB = event.target.attributes.job.value; // delete or complete 
+    if (elementJOB == "complete"){
+        completeToDo (element); 
+    }else if(elementJOB == "delete"){
+        removeToDo(element); 
+    }
+}); 
+
+;
