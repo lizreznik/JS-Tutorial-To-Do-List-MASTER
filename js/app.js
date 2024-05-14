@@ -110,4 +110,20 @@ localStorage.setItem('key', 'value');
 let variable = localStorage.getItem('key'); 
 localStorage.setItem("TODO", JSON.stringify(LIST)); 
 
+
+// restore to-do-list from localStorage. 
+let data = localStorage.getItem("TODO"); 
+if (data){
+    LIST = JSON.parse(data); 
+    loadToDo(LIST); 
+    id = LIST.length; 
+}else{
+    LIST = []; 
+    id = 0; 
+}
+function loadToDo(array){ 
+    array.forEach(function(item){
+        addToDo(item.name, item.id, item.done, item.trash); 
+    })
+}
 ;
