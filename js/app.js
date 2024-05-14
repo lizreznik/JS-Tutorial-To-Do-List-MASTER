@@ -126,4 +126,6 @@ function loadToDo(array){
         addToDo(item.name, item.id, item.done, item.trash); 
     })
 }
+// clear localStorage.
+
 ;
